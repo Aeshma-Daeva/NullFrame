@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050706" />
+  <meta name="description" content="Demian in Nullframe — recurrent substrate architecture, concepts, experiments, controls, and public evidence." />
+  <title>Demian — NULLFRAME LAB</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../" aria-label="Nullframe Lab home">
+        <img src="../../assets/grin-mark.svg" alt="" />
+        <span>NULLFRAME <em>LAB</em></span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#architecture">Architecture</a>
+        <a href="#constellation">Constellation</a>
+        <a href="#sources">Sources</a>
+        <a href="../../">Home →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="project-hero shell">
+      <div class="project-hero-copy">
+        <div class="kicker">project / recurrent substrate</div>
+        <h1>DEMIAN</h1>
+        <p class="project-lead">A recurrent-machine research line built to make internal state explicit enough that continuation, route modulation, and mechanism claims can be tested instead of guessed.</p>
+        <div class="project-question">
+          <span>current orientation</span>
+          <p>How much of a recurrent machine’s future is carried by internal state that is not visible at the surface, and how can that dependence be tested without smuggling stronger claims into the result?</p>
+        </div>
+      </div>
+      <aside class="claim-boundary">
+        <div class="eyebrow">claim boundary</div>
+        <p>The public runtime supports claims about implementation, state continuity, serialization/restore behavior, ablations, and measurable route modulation.</p>
+        <strong>It does not establish self-awareness, agency, identity, consciousness, self-preservation, homeostasis, or general autonomy.</strong>
+        <a href="https://github.com/Aeshma-Daeva/Demian-Substrate/blob/main/README.md">Read the canonical public boundary ↗</a>
+      </aside>
+    </section>
+
+    <section class="section" id="architecture">
+      <div class="shell">
+        <div class="section-head project-section-head">
+          <div>
+            <div class="eyebrow">runtime anatomy</div>
+            <h2>Six state owners, one continuation problem.</h2>
+          </div>
+          <p>The names are machine-observable roles, not claims that the channels correspond to human cognitive faculties.</p>
+        </div>
+        <div class="channel-flow" aria-label="Demian v1 route summary">
+          <span>coupling input → <b>fast</b></span><span><b>fast</b> → <b>message</b> → <b>carrier</b> → <b>slow</b></span><span><b>fast + slow + control + message + carrier</b> → <b>gate</b></span><span><b>gate</b> → graded route modulation</span>
+        </div>
+        <div class="channel-grid">
+          <article class="channel"><span>01</span><h3>fast</h3><p>Exposed surface state: the currently visible trajectory surface.</p></article>
+          <article class="channel"><span>02</span><h3>slow</h3><p>Longer-horizon continuity state and accumulated route deformation.</p></article>
+          <article class="channel"><span>03</span><h3>control</h3><p>Steering pressure that participates in internal route decisions.</p></article>
+          <article class="channel"><span>04</span><h3>message</h3><p>Shorter-timescale perturbation trace before deeper accumulation.</p></article>
+          <article class="channel"><span>05</span><h3>carrier</h3><p>Slower accumulation of message shape across recurrent steps.</p></article>
+          <article class="channel"><span>06</span><h3>gate</h3><p>Continuous internal pressure that modulates existing route strength.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section constellation-section" id="constellation">
+      <div class="shell">
+        <div class="section-head project-section-head"><div><div class="eyebrow">project constellation</div><h2>Open the fields around Demian.</h2></div><p>Select a node for progressive explanation. Select a connection to see the actual reason the relation exists. Sources can be hidden when you want a cleaner conceptual view.</p></div>
+        <div class="constellation" data-constellation>
+          <div class="constellation-toolbar" aria-label="Constellation filters"><span>show</span><button type="button" data-node-type-filter="concept" aria-pressed="true">concepts</button><button type="button" data-node-type-filter="experiment" aria-pressed="true">experiments</button><button type="button" data-node-type-filter="method" aria-pressed="true">methods</button><button type="button" data-node-type-filter="source" aria-pressed="false">sources</button></div>
+          <div class="constellation-layout">
+            <div class="graph-field" aria-label="Interactive Demian concept graph"><svg class="graph-edges" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="false"><g data-edge-layer></g></svg><div class="graph-nodes" data-node-layer></div><div class="graph-hint">hover/focus a node to expose its local neighborhood · click any line for the connection</div></div>
+            <aside class="constellation-detail" data-constellation-detail aria-live="polite"><div class="detail-kind" data-detail-kind>project</div><h3 data-detail-title>Demian</h3><p class="detail-summary" data-detail-summary></p><p class="detail-layer" data-detail-quick hidden></p><p class="detail-layer deeper" data-detail-deeper hidden></p><p class="detail-status" data-detail-status hidden></p><div class="detail-links" data-detail-links></div><div class="detail-connections-wrap"><div class="detail-subhead">connections from here</div><div class="detail-connections" data-detail-connections></div></div></aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <div class="shell">
+        <div class="section-head project-section-head"><div><div class="eyebrow">public provenance</div><h2>The graph points back to executable and inspectable sources.</h2></div><p>Nullframe is a presentation and orientation layer. The code and experiment repositories remain canonical for implementation-level claims.</p></div>
+        <div class="source-list">
+          <a href="https://github.com/Aeshma-Daeva/Demian-Substrate/blob/main/README.md"><span>runtime boundary</span><strong>Demian Substrate README</strong><em>objective · anatomy · metrics · claim limits</em></a>
+          <a href="https://github.com/Aeshma-Daeva/Demian-Substrate/blob/main/docs/SUBSTRATE_ANATOMY.md"><span>anatomy</span><strong>Substrate Anatomy</strong><em>channel roles · lineage · gate-state reading</em></a>
+          <a href="https://github.com/Aeshma-Daeva/Demian-Substrate/blob/main/tests/test_demian_v1_public_api.py"><span>executable evidence</span><strong>Public API tests</strong><em>serialization · restore · surface-only control</em></a>
+          <a href="https://github.com/Aeshma-Daeva/Demian-Substrate/blob/main/tests/test_demian_v1_gate_state.py"><span>executable evidence</span><strong>Gate-state tests</strong><em>gate behavior · bounded ablations</em></a>
+          <a href="https://aeshma-daeva.github.io/Demian-Lab/"><span>research log</span><strong>Demian Lab</strong><em>broader public research and EEG adaptation surface</em></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>NULLFRAME LAB // DEMIAN / recurrent substrate</span><a href="../../">← back to Nullframe</a></div></footer>
+  <script type="module" src="../../assets/js/constellation.mjs"></script>
+</body>
+</html>
