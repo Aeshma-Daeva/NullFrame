@@ -3,19 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#050706" />
+  <meta name="theme-color" content="#030705" />
   <meta name="description" content="Nullframe Lab — a compact project cockpit for machines, experiments, builds, research, and the ideas connecting them." />
   <title>NULLFRAME LAB — independent systems lab</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/global.css" />
   <link rel="stylesheet" href="./assets/css/home.css" />
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header cockpit-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Nullframe Lab home">
-        <img src="./assets/grin-mark.svg" alt="" />
+        <img src="./assets/observer-mark.svg" alt="" />
         <span>NULLFRAME <em>LAB</em></span>
       </a>
       <nav class="nav cockpit-nav" aria-label="Primary navigation">
@@ -32,31 +36,19 @@
       <div class="cockpit-hero-copy">
         <div class="cockpit-kicker">NULLFRAME // LAB INDEX</div>
         <h1 id="home-title"><span>NULLFRAME</span><span class="lab">LAB</span></h1>
-        <div class="subtitle">independent systems lab</div>
+        <div class="subtitle">[ independent systems lab ]</div>
         <p class="cockpit-lead">Research systems, machines, experiments, and the ideas connecting them.</p>
         <div class="cockpit-signal"><span></span> observe · test · break · understand · build</div>
       </div>
 
       <div class="cockpit-visual" aria-hidden="true">
         <div class="cockpit-observer" data-eye-sphere>
-          <span class="radar-ring radar-ring-a" data-radar-ring></span>
-          <span class="radar-ring radar-ring-b" data-radar-ring></span>
-          <span class="radar-ring radar-ring-c" data-radar-ring></span>
-          <span class="cockpit-orbit-dot orbit-a"></span>
-          <span class="cockpit-orbit-dot orbit-b"></span>
-          <div class="observer-sphere">
-            <div class="sphere-noise"></div>
-            <div class="observer-eye" data-eye>
-              <div class="eye-iris">
-                <div class="eye-pupil" data-pupil></div>
-                <span class="eye-glint eye-glint-a"></span>
-                <span class="eye-glint eye-glint-b"></span>
-              </div>
-            </div>
-            <img class="observer-grin" src="./assets/grin-mark.svg" alt="" />
-          </div>
-          <span class="observer-signal"></span>
-          <svg class="cockpit-wave" viewBox="0 0 170 28" aria-hidden="true"><path d="M0 15h25l7-7 7 14 8-19 9 22 8-10h17l5-6 8 12 8-8h18l5 4 7-11 8 17 8-8h21" /></svg>
+          <span class="observer-ring ring-a" data-radar-ring></span>
+          <span class="observer-ring ring-b" data-radar-ring></span>
+          <img class="observer-mark" data-observer-mark src="./assets/observer-mark.svg" alt="" />
+          <span class="observer-eye-zone" data-eye>
+            <span class="observer-pupil" data-pupil></span>
+          </span>
         </div>
       </div>
     </section>
@@ -69,27 +61,27 @@
       <div class="entry-grid">
         <a class="entry-card accent-lime" href="#featured-projects">
           <span class="entry-number">01</span>
-          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="3"/><path d="M24 3v9M24 36v9M3 24h9M36 24h9"/></svg>
+          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="2"/><circle cx="24" cy="24" r="18" class="ghost"/><path d="M24 3v11M24 34v11M3 24h11M34 24h11"/></svg>
           <div><h3>Start Here</h3><p>Quick orientation across the lab and what is currently active.</p></div><span class="entry-arrow">→</span>
         </a>
         <a class="entry-card accent-cyan" href="#featured-projects">
           <span class="entry-number">02</span>
-          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 5.4 11 12.1 1.8-8.8 8.5 2.1 12-10.8-5.7-10.8 5.7 2.1-12-8.8-8.5L18.6 16Z"/></svg>
+          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 5.5 11.1 12.3 1.8-8.9 8.7 2.1 12.2L24 33l-11 5.8 2.1-12.2-8.9-8.7 12.3-1.8Z"/></svg>
           <div><h3>Featured Work</h3><p>Representative projects spanning software, signals, worlds, and builds.</p></div><span class="entry-arrow">→</span>
         </a>
         <a class="entry-card accent-gold" href="#ethos">
           <span class="entry-number">03</span>
-          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 24s7-12 19-12 19 12 19 12-7 12-19 12S5 24 5 24Z"/><circle cx="24" cy="24" r="5"/><path d="M24 3v5M24 40v5"/></svg>
+          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24s8-12 20-12 20 12 20 12-8 12-20 12S4 24 4 24Z"/><circle cx="24" cy="24" r="5"/><path d="M24 4v5M24 39v5"/></svg>
           <div><h3>Methods &amp; Evidence</h3><p>How claims, controls, interventions, and evidence boundaries are handled.</p></div><span class="entry-arrow">→</span>
         </a>
         <a class="entry-card accent-purple" href="#featured-projects">
           <span class="entry-number">04</span>
-          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M11 38c2-14 4-23 13-28 5-3 12-1 13 5 2 8-8 12-14 9-5-2-5-8-1-11"/><path d="M8 35c8-4 14-3 20 3"/></svg>
+          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 40c2-14 5-25 14-30 7-4 14 0 13 7-1 8-10 11-16 8-5-2-6-8-2-12"/><path d="M8 37c8-4 15-3 22 3"/></svg>
           <div><h3>Research Lineages</h3><p>Follow how questions, architectures, and experiments branch into new work.</p></div><span class="entry-arrow">→</span>
         </a>
         <a class="entry-card accent-orange" href="#ethos">
           <span class="entry-number">05</span>
-          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="m12 36 24-24"/></svg>
+          <svg class="entry-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M12 36 36 12"/></svg>
           <div><h3>Negative Results &amp; Nulls</h3><p>Failed tests and non-results stay visible instead of disappearing.</p></div><span class="entry-arrow">→</span>
         </a>
         <a class="entry-card accent-green" href="#ethos">
@@ -115,56 +107,27 @@
         <a class="section-link" href="./projects/demian/">open Demian atlas →</a>
       </div>
       <div class="featured-project-grid">
-        <a class="project-tile project-lime" href="https://aeshma-daeva.github.io/Demian-Lab/" aria-label="Open Demian Lab">
-          <svg class="project-emblem" data-project-emblem="demian-lab" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="25"/><circle cx="36" cy="36" r="12"/><circle cx="36" cy="36" r="3"/><path d="M36 5v10M36 57v10M5 36h10M57 36h10M17 17l7 7M48 48l7 7"/></svg>
-          <h3>Demian Lab</h3><span>Research</span>
-        </a>
-        <article class="project-tile project-cyan" aria-label="Demian EEG, biosignals project">
-          <svg class="project-emblem" data-project-emblem="demian-eeg" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="26"/><path d="M10 37h10l5-13 7 28 7-34 7 23 5-9h11"/><path d="M18 15c8-7 28-8 37 2"/></svg>
-          <h3>Demian EEG</h3><span>Biosignals</span>
-        </article>
-        <article class="project-tile project-gold" aria-label="Demian Geo, geodynamics project">
-          <svg class="project-emblem" data-project-emblem="demian-geo" viewBox="0 0 72 72" aria-hidden="true"><ellipse cx="36" cy="36" rx="27" ry="15"/><ellipse cx="36" cy="36" rx="15" ry="27" transform="rotate(36 36 36)"/><path d="M15 20c15 8 27 25 41 32"/><circle cx="51" cy="25" r="3"/></svg>
-          <h3>Demian Geo</h3><span>Geodynamics</span>
-        </article>
-        <a class="project-tile project-purple" href="https://github.com/Aeshma-Daeva/AnimaMundi" aria-label="Open Anima Mundi repository">
-          <svg class="project-emblem" data-project-emblem="anima-mundi" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="27"/><path data-tree-branch d="M36 60V31"/><path data-tree-branch d="M36 43 24 30M36 39l12-15M36 49 18 40M36 48l19-9"/><path data-tree-branch d="M24 30 19 20M24 30l3-12M48 24l-1-11M48 24l9-8M18 40l-7-6M55 39l7-8"/><path d="M25 60c2-7 7-10 11-10s9 3 11 10"/></svg>
-          <h3>Anima Mundi</h3><span>Worlds</span>
-        </a>
-        <article class="project-tile project-violet" aria-label="Shadow King, systems architecture project">
-          <svg class="project-emblem" data-project-emblem="shadow-king" viewBox="0 0 72 72" aria-hidden="true"><path d="M12 59 21 25l8 18 7-34 8 34 8-23 8 39Z"/><path d="M18 59h36M27 51h18"/><path d="m36 9 4 10-4 7-4-7Z"/></svg>
-          <h3>Shadow King</h3><span>Systems</span>
-        </article>
-        <article class="project-tile project-orange" aria-label="Projector Pan Tilt, physical build">
-          <svg class="project-emblem" data-project-emblem="projector-pan-tilt" viewBox="0 0 72 72" aria-hidden="true"><path d="M14 60h44M25 59V48l10-7 7-16"/><circle cx="35" cy="41" r="5"/><circle cx="43" cy="24" r="5"/><rect x="43" y="13" width="17" height="12" rx="2"/><path d="M51 25v11M44 36h14"/></svg>
-          <h3>Projector Pan/Tilt</h3><span>Build</span>
-        </article>
-        <a class="project-tile project-green" href="./projects/demian/" aria-label="Open Demian Substrate in the Nullframe atlas">
-          <svg class="project-emblem" data-project-emblem="demian-substrate" viewBox="0 0 72 72" aria-hidden="true"><path d="m36 8 23 13v29L36 64 13 50V21Z"/><path d="m13 21 23 14 23-14M36 35v29"/><path d="m25 29 11-7 11 7-11 7Z"/><circle cx="36" cy="46" r="5"/></svg>
-          <h3>Demian Substrate</h3><span>Software</span>
-        </a>
+        <a class="project-tile project-lime" href="https://aeshma-daeva.github.io/Demian-Lab/" aria-label="Open Demian Lab"><svg class="project-emblem" data-project-emblem="demian-lab" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="25"/><circle cx="36" cy="36" r="13"/><circle cx="36" cy="36" r="4"/><path d="M36 5v10M36 57v10M5 36h10M57 36h10M17 17l7 7M48 48l7 7"/></svg><h3>Demian Lab</h3><span>Research</span></a>
+        <article class="project-tile project-cyan" aria-label="Demian EEG, biosignals project"><svg class="project-emblem" data-project-emblem="demian-eeg" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="26"/><path d="M9 38h11l5-15 7 29 7-36 7 25 5-10h12"/></svg><h3>Demian EEG</h3><span>Biosignals</span></article>
+        <article class="project-tile project-gold" aria-label="Demian Geo, geodynamics project"><svg class="project-emblem" data-project-emblem="demian-geo" viewBox="0 0 72 72" aria-hidden="true"><ellipse cx="36" cy="36" rx="27" ry="15"/><ellipse cx="36" cy="36" rx="15" ry="27" transform="rotate(38 36 36)"/><path d="M14 20c17 8 29 28 44 34"/><circle cx="52" cy="25" r="3"/></svg><h3>Demian Geo</h3><span>Geodynamics</span></article>
+        <a class="project-tile project-purple" href="https://github.com/Aeshma-Daeva/AnimaMundi" aria-label="Open Anima Mundi repository"><svg class="project-emblem" data-project-emblem="anima-mundi" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="28" class="ghost"/><path data-tree-branch d="M36 62V31M36 44 24 29M36 40l12-16M36 50 18 40M36 48l19-10M24 29l-5-10M24 29l3-12M48 24l-1-12M48 24l10-8M18 40l-7-6M55 38l8-8"/><path d="M25 61c2-7 7-11 11-11s9 4 11 11"/></svg><h3>Anima Mundi</h3><span>Worlds</span></a>
+        <article class="project-tile project-violet" aria-label="Shadow King, systems architecture project"><svg class="project-emblem" data-project-emblem="shadow-king" viewBox="0 0 72 72" aria-hidden="true"><path d="M11 59 21 25l8 18 7-34 8 34 8-23 9 39Z"/><path d="M17 59h38M27 51h18"/><path d="m36 9 4 10-4 7-4-7Z"/></svg><h3>Shadow King</h3><span>Systems</span></article>
+        <article class="project-tile project-orange" aria-label="Projector Pan Tilt, physical build"><svg class="project-emblem" data-project-emblem="projector-pan-tilt" viewBox="0 0 72 72" aria-hidden="true"><path d="M13 61h46M24 60V49l11-8 8-16"/><circle cx="35" cy="41" r="5"/><circle cx="43" cy="24" r="5"/><rect x="43" y="13" width="18" height="12" rx="2"/><path d="M52 25v11M44 36h16"/></svg><h3>Projector Pan/Tilt</h3><span>Build</span></article>
+        <a class="project-tile project-green" href="./projects/demian/" aria-label="Open Demian Substrate in the Nullframe atlas"><svg class="project-emblem" data-project-emblem="demian-substrate" viewBox="0 0 72 72" aria-hidden="true"><path d="m36 8 23 13v29L36 64 13 50V21Z"/><path d="m13 21 23 14 23-14M36 35v29"/><path d="m25 29 11-7 11 7-11 7Z"/><circle cx="36" cy="46" r="5"/></svg><h3>Demian Substrate</h3><span>Software</span></a>
       </div>
     </section>
 
     <section class="shell cockpit-section ethos-section" id="ethos" aria-labelledby="ethos-title">
-      <div class="cockpit-section-head">
-        <h2 id="ethos-title">Our Ethos <span>›</span></h2>
-        <span class="section-code">METHOD / BOUNDARIES</span>
-      </div>
+      <div class="cockpit-section-head"><h2 id="ethos-title">Our Ethos <span>›</span></h2><span class="section-code">METHOD / BOUNDARIES</span></div>
       <div class="ethos-grid">
         <article class="ethos-card accent-green"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="m22 4 15 6v11c0 9-6 15-15 19C13 36 7 30 7 21V10Z"/><path d="m14 22 5 5 11-12"/></svg><div><h3>Evidence policy</h3><p>Mechanism, observation, and interpretation stay separate. Results are not promoted beyond what interventions support.</p></div><a href="./projects/demian/">Learn more →</a></article>
-        <article class="ethos-card accent-cyan"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 22s5-9 14-9 14 9 14 9-5 9-14 9S8 22 8 22Z"/><circle cx="22" cy="22" r="4"/><path d="M31 9h7v7"/></svg><div><h3>Privacy boundaries</h3><p>Commercial and private systems do not enter the public surface automatically. Selective publication is intentional.</p></div><a href="#featured-projects">Current scope →</a></article>
-        <article class="ethos-card accent-orange"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="15"/><path d="m11 33 22-22"/></svg><div><h3>Negative results</h3><p>Failures and nulls are part of the record. They narrow the search space instead of being edited out.</p></div><a href="./projects/demian/">See examples →</a></article>
+        <article class="ethos-card accent-cyan"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 22s5-9 14-9 14 9 14 9-5 9-14 9S8 22 8 22Z"/><circle cx="22" cy="22" r="4"/><path d="M31 9h7v7"/></svg><div><h3>Privacy boundaries</h3><p>Private and commercial systems do not enter the public surface automatically. Selective publication is intentional.</p></div><a href="#featured-projects">Current scope →</a></article>
+        <article class="ethos-card accent-orange"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="15"/><path d="m11 33 22-22"/></svg><div><h3>Negative results</h3><p>Failures and nulls remain part of the record. They narrow the search instead of being edited out.</p></div><a href="./projects/demian/">See examples →</a></article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer cockpit-footer">
-    <div class="shell footer-inner">
-      <span class="footer-signal">⌁ NULLFRAME LAB // OPEN · REPRODUCIBLE · ACCOUNTABLE</span>
-      <span class="status-dot">systems online</span>
-    </div>
-  </footer>
+  <footer class="site-footer cockpit-footer"><div class="shell footer-inner"><span class="footer-signal">NULLFRAME LAB // OPEN · REPRODUCIBLE · ACCOUNTABLE</span><span class="status-dot">● systems online</span></div></footer>
   <script type="module" src="./assets/js/eye-sphere.mjs"></script>
 </body>
 </html>

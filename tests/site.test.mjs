@@ -42,3 +42,31 @@ test('cockpit stylesheet defines dense responsive grids and varied accents',()=>
   assert.match(css,/--accent-cyan/);
   assert.match(css,/@media\s*\(max-width:\s*720px\)/);
 });
+
+test('homepage loads the Figma-approved typography stack',()=>{
+  const html=read('site/index.html');
+  const css=read('site/assets/css/home.css');
+  assert.match(html,/fonts\.googleapis\.com/);
+  assert.match(html,/Barlow\+Condensed/);
+  assert.match(html,/IBM\+Plex\+Sans/);
+  assert.match(html,/IBM\+Plex\+Mono/);
+  assert.match(css,/--home-display:\s*"Barlow Condensed"/);
+  assert.match(css,/--home-body:\s*"IBM Plex Sans"/);
+  assert.match(css,/--home-mono:\s*"IBM Plex Mono"/);
+});
+
+test('homepage uses the Figma observer mark instead of the generic CSS sphere',()=>{
+  const html=read('site/index.html');
+  assert.match(html,/data-observer-mark/);
+  assert.match(html,/observer-mark\.svg/);
+  assert.match(html,/data-eye-sphere/);
+});
+
+test('homepage comfortable reading sizes are encoded in the visual stylesheet',()=>{
+  const css=read('site/assets/css/home.css');
+  assert.match(css,/\.cockpit-lead\s*\{[^}]*font-size:\s*1\.125rem/s);
+  assert.match(css,/\.entry-card p\s*\{[^}]*font-size:\s*\.84rem/s);
+  assert.match(css,/\.entry-card h3\s*\{[^}]*font-size:\s*1rem/s);
+  assert.match(css,/\.project-tile h3\s*\{[^}]*font-size:\s*\.84rem/s);
+  assert.match(css,/@media\s*\(max-width:\s*720px\)[\s\S]*\.entry-card p\s*\{[^}]*font-size:\s*\.78rem/s);
+});

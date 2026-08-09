@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="title desc">
+  <title id="title">Nullframe observer mark</title>
+  <desc id="desc">A green eye and toothy grin inside a circular technical field.</desc>
+  <defs>
+    <radialGradient id="field" cx="50%" cy="46%" r="64%">
+      <stop offset="0" stop-color="#1c3525"/>
+      <stop offset=".62" stop-color="#09130e"/>
+      <stop offset="1" stop-color="#030705"/>
+    </radialGradient>
+    <radialGradient id="iris" cx="45%" cy="38%" r="58%">
+      <stop offset="0" stop-color="#f4ffd7"/>
+      <stop offset=".18" stop-color="#b9ff3b"/>
+      <stop offset=".7" stop-color="#39864c"/>
+      <stop offset="1" stop-color="#102617"/>
+    </radialGradient>
+  </defs>
+  <circle cx="160" cy="120" r="110" fill="url(#field)" stroke="#8aa447" stroke-opacity=".5"/>
+  <circle cx="160" cy="120" r="94" fill="none" stroke="#7d963e" stroke-opacity=".32" stroke-dasharray="3 7"/>
+  <path d="M54 103C91 70 227 70 266 103c-33 47-179 49-212 0Z" fill="#e6ebcf" stroke="#97aa78" stroke-width="3"/>
+  <path d="M59 104c31-17 65-25 101-25s70 8 101 25c-34-7-67-10-101-10s-68 3-101 10Z" fill="#aeb990" opacity=".45"/>
+  <circle cx="160" cy="105" r="38" fill="url(#iris)" stroke="#b9ff3b" stroke-width="2"/>
+  <circle cx="160" cy="105" r="15" fill="#020403"/>
+  <circle cx="147" cy="92" r="6" fill="#fff"/>
+  <path d="M88 150c18 14 42 21 72 21 31 0 55-8 72-22-6 37-33 63-72 63-38 0-65-24-72-62Z" fill="#d4dbb3" stroke="#8da468" stroke-width="3"/>
+  <path d="M101 158c14 8 34 13 59 13 26 0 46-7 59-15-7 25-28 39-59 39-29 0-51-14-59-37Z" fill="#07100d"/>
+  <g stroke="#d4dbb3" stroke-width="2">
+    <path d="M118 168l-3 18"/><path d="M137 171l-1 20"/><path d="M158 172v21"/><path d="M179 171l1 20"/><path d="M199 166l4 18"/>
+  </g>
+  <path d="M88 158c-5 15-11 27-18 34 12-2 20-8 25-18M233 156c7 17 14 29 23 37-14-3-23-10-29-20" fill="none" stroke="#b9ff3b" stroke-opacity=".7" stroke-width="2"/>
+</svg>
