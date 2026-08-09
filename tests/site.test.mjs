@@ -33,7 +33,8 @@ test('homepage hero is cockpit-sized rather than full viewport',()=>{
 });
 
 test('cockpit stylesheet defines dense responsive grids and varied accents',()=>{
-  const css=read('site/assets/css/global.css');
+  assert.equal(existsSync(new URL('../site/assets/css/home.css',import.meta.url)),true);
+  const css=read('site/assets/css/home.css');
   for(const token of ['.cockpit-hero','.entry-grid','.category-strip','.featured-project-grid','.ethos-grid']) assert.match(css,new RegExp(token.replace('.','\\.')));
   assert.match(css,/--accent-purple/);
   assert.match(css,/--accent-orange/);
