@@ -26,6 +26,9 @@ The public Demian runtime supports claims about implementation, state continuity
 | What is the Demian runtime? | [Demian Substrate](https://github.com/Aeshma-Daeva/Demian-Substrate) | Canonical public runtime authority. |
 | How is restore behavior checked? | [Public API restore tests](https://github.com/Aeshma-Daeva/Demian-Substrate/blob/main/tests/test_demian_v1_public_api.py) | Executable checkpoint/restore and surface-only controls. |
 | How is gate-state behavior checked? | [Gate-state tests](https://github.com/Aeshma-Daeva/Demian-Substrate/blob/main/tests/test_demian_v1_gate_state.py) | Executable gate-state and ablation controls. |
+| How is the substrate applied to EEG-like sequences? | [Demian EEG](https://github.com/Aeshma-Daeva/Demian-EEG) | Synthetic adapter, order comparison, and restore controls. |
+| How is it applied to ordered well logs? | [Demian Geo](https://github.com/Aeshma-Daeva/Demian-Geo) | Synthetic per-well adapter and group-aware evaluation boundary. |
+| How does evidence standing constrain action? | [Zenith Epistemic Runtime](https://github.com/Aeshma-Daeva/Zenith-Epistemic-Runtime) | Typed justification, contradiction, refresh, and authority transitions. |
 | Where is research published? | [Demian Lab](https://aeshma-daeva.github.io/Demian-Lab/) | Research publication and case explanations. |
 
 ## Run the public site
@@ -46,6 +49,8 @@ NullFrame does not replace the projects it references. Their responsibilities ar
 
 - **[Demian Substrate](https://github.com/Aeshma-Daeva/Demian-Substrate)** is the runtime authority for implementation and executable runtime controls.
 - **[Demian Lab](https://aeshma-daeva.github.io/Demian-Lab/)** is the research-publication surface for methods, reports, and case explanations.
+- **[Demian EEG](https://github.com/Aeshma-Daeva/Demian-EEG)** and **[Demian Geo](https://github.com/Aeshma-Daeva/Demian-Geo)** are bounded public adapters, not domain-validity claims.
+- **[Zenith Epistemic Runtime](https://github.com/Aeshma-Daeva/Zenith-Epistemic-Runtime)** is the explicit evidence-to-authority state machine, not a complete autonomous agent.
 - **[Abraxas](https://github.com/Aeshma-Daeva/Abraxas)** is a separate security-research application.
 - **[Circumpunct Commons](https://github.com/Aeshma-Daeva/circumpunct-commons)** is a separate experiment in cross-run context continuity.
 

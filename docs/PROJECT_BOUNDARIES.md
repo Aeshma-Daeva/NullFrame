@@ -6,6 +6,9 @@ NullFrame is a public atlas, not the authority for every project it references. 
 | --- | --- | --- | --- |
 | [Demian Substrate](https://github.com/Aeshma-Daeva/Demian-Substrate) | Recurrent-state runtime and executable controls. | Its source, tests, and repository documentation. | That an atlas node proves a runtime claim. |
 | [Demian Lab](https://aeshma-daeva.github.io/Demian-Lab/) | Research publication for methods, reports, and case explanations. | Its published research materials and stated evidence status. | That a published case is a runtime feature or independently replicated result. |
+| [Demian EEG](https://github.com/Aeshma-Daeva/Demian-EEG) | Synthetic EEG-like observer adapter. | Its source, tests, fixture, and claim boundary. | Clinical validity, brain-state decoding, or independent replication. |
+| [Demian Geo](https://github.com/Aeshma-Daeva/Demian-Geo) | Synthetic well-log sequence adapter. | Its source, tests, fixture, and claim boundary. | Predictive lift, leaderboard standing, or geological causal meaning. |
+| [Zenith Epistemic Runtime](https://github.com/Aeshma-Daeva/Zenith-Epistemic-Runtime) | Typed evidence, justification, and action-authority state machine. | Its contracts, transition tests, and claim boundary. | Truth discovery, complete agency, or production safety. |
 | [Abraxas](https://github.com/Aeshma-Daeva/Abraxas) | Separate security-research application. | Its own public branch, documentation, and scoped validation evidence. | That it is implemented, operated, or authorized through NullFrame. |
 | [Circumpunct Commons](https://github.com/Aeshma-Daeva/circumpunct-commons) | Separate experiment in cross-run context continuity. | Its runner, records, and experiment protocol. | That cross-run continuity is an installed NullFrame capability. |
 
