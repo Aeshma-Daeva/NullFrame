@@ -1,0 +1,478 @@
+{
+  "artifacts": [
+    {
+      "commit": "82e878e5cde83a06103c6e14a38094d4614d3082",
+      "id": "A-CHAR-SUMMARY-001",
+      "media_type": "application/json",
+      "path": "data/diagnostics/demian_v1_characterization_20261005/summary.json",
+      "repository": "Aeshma-Daeva/Demian-Lab",
+      "url": "https://github.com/Aeshma-Daeva/Demian-Lab/blob/82e878e5cde83a06103c6e14a38094d4614d3082/data/diagnostics/demian_v1_characterization_20261005/summary.json"
+    },
+    {
+      "commit": "d4bcc157e1a68b1ace9789f1d3567f0a7c879418",
+      "id": "A-BASIN-SUMMARY-001",
+      "media_type": "application/json",
+      "path": "data/diagnostics/demian_basin_horizon_pilot_20261005/summary.json",
+      "repository": "Aeshma-Daeva/Demian-Lab",
+      "url": "https://github.com/Aeshma-Daeva/Demian-Lab/blob/d4bcc157e1a68b1ace9789f1d3567f0a7c879418/data/diagnostics/demian_basin_horizon_pilot_20261005/summary.json"
+    },
+    {
+      "commit": "d4bcc157e1a68b1ace9789f1d3567f0a7c879418",
+      "id": "A-BASIN-TABLE-001",
+      "media_type": "application/vnd.apache.parquet",
+      "path": "data/diagnostics/demian_basin_horizon_pilot_20261005/checkpoints.parquet",
+      "repository": "Aeshma-Daeva/Demian-Lab",
+      "url": "https://github.com/Aeshma-Daeva/Demian-Lab/blob/d4bcc157e1a68b1ace9789f1d3567f0a7c879418/data/diagnostics/demian_basin_horizon_pilot_20261005/checkpoints.parquet"
+    }
+  ],
+  "controls": [
+    {
+      "artifact_ids": [
+        "A-CHAR-SUMMARY-001"
+      ],
+      "id": "C-GATE-DISABLED-001",
+      "limitations": [
+        "Architecture condition, not an acute trajectory intervention."
+      ],
+      "name": "Gate-disabled transition rule",
+      "semantics": "Changes the architecture update rule so gate modulation is disabled."
+    },
+    {
+      "artifact_ids": [
+        "A-CHAR-SUMMARY-001"
+      ],
+      "id": "C-GATE-FROZEN-001",
+      "limitations": [
+        "Architecture condition, not an acute channel clamp."
+      ],
+      "name": "Gate-frozen transition rule",
+      "semantics": "Holds gate dynamics fixed while other channels update."
+    },
+    {
+      "artifact_ids": [
+        "A-BASIN-SUMMARY-001"
+      ],
+      "id": "C-EXACT-RESTORE-001",
+      "limitations": [
+        "Verification control, not an independent replicate."
+      ],
+      "name": "Full checkpoint restore",
+      "semantics": "Restores complete recurrent state and runtime metadata."
+    },
+    {
+      "artifact_ids": [
+        "A-BASIN-SUMMARY-001"
+      ],
+      "id": "C-SHAM-RESTORE-001",
+      "limitations": [
+        "Detects implementation-path effects only."
+      ],
+      "name": "Sham restore",
+      "semantics": "Exercises the continuation path without changing state."
+    },
+    {
+      "artifact_ids": [
+        "A-BASIN-SUMMARY-001"
+      ],
+      "id": "C-BODY-SURFACE-001",
+      "limitations": [
+        "May be off the reachable state distribution.",
+        "Does not test every possible surface-only reconstruction."
+      ],
+      "name": "Zero-hidden surface reconstruction",
+      "semantics": "Matches the readout after zeroing other recurrent channels."
+    },
+    {
+      "artifact_ids": [
+        "A-BASIN-SUMMARY-001"
+      ],
+      "id": "C-REACHABLE-SURFACE-001",
+      "limitations": [
+        "Surface match is approximate.",
+        "History lag and hidden distance are not yet matched."
+      ],
+      "name": "Reachable approximate surface match",
+      "semantics": "Continues the nearest earlier reachable state under aligned runtime metadata."
+    }
+  ],
+  "experiments": [
+    {
+      "artifact_ids": [
+        "A-CHAR-SUMMARY-001"
+      ],
+      "id": "E-CHAR-001",
+      "name": "Six-channel surface/internal characterization",
+      "protocol_version": "phase-one-2026-10-05",
+      "replication_scope": {
+        "checkpoint_row_count": 18,
+        "dependent_observations": [
+          "gate_modes_share_parameter_seed",
+          "history_conditions_share_parameter_seed"
+        ],
+        "history_condition_count": 2,
+        "independent_unit": "parameter_seed",
+        "initial_state_count": 3,
+        "input_seed_count": 0,
+        "parameter_seed_count": 3,
+        "trajectory_count": 18
+      },
+      "system": "demian_v1_gate_state"
+    },
+    {
+      "artifact_ids": [
+        "A-BASIN-SUMMARY-001",
+        "A-BASIN-TABLE-001"
+      ],
+      "id": "E-BASIN-001",
+      "name": "Finite-window basin-horizon pilot",
+      "protocol_version": "demian-basin-horizon-afpv2-pilot-v1",
+      "replication_scope": {
+        "checkpoint_row_count": 234,
+        "dependent_observations": [
+          "checkpoints_within_trajectory",
+          "radii_share_direction",
+          "gate_modes_share_parameter_seed"
+        ],
+        "history_condition_count": 1,
+        "independent_unit": "parameter_seed",
+        "initial_state_count": 6,
+        "input_seed_count": 0,
+        "parameter_seed_count": 2,
+        "trajectory_count": 78
+      },
+      "system": "demian_v1_gate_state"
+    }
+  ],
+  "hypotheses": [
+    {
+      "alternative_explanations": [
+        "AFP may require selected or induced surface-stable conditions.",
+        "The tested horizons may contain slow transients rather than asymptotic regimes."
+      ],
+      "evaluation_conditions": [
+        "operational_surface_convergence",
+        "complete_post_settling_persistence_window",
+        "structured_internal_change",
+        "matched_continuation_intervention"
+      ],
+      "evidence_status": "inconclusive",
+      "falsifiers": [
+        "Surface-converged held-out trajectories consistently show full-state convergence.",
+        "Structured post-settling dynamics fail matched continuation interventions."
+      ],
+      "id": "H-AFP-002",
+      "lifecycle": "active",
+      "next_test": "Locate surface-stable development conditions, freeze induction and thresholds, then evaluate held-out seeds.",
+      "operational_prediction": "A complete post-settling window contains structured internal change after the surface satisfies step, net-drift, dwell, and escape criteria.",
+      "result_ids": [
+        "R-AFP-BASIN-001"
+      ],
+      "statement": "Operational surface convergence can coexist with persistent structured and continuation-relevant full-state dynamics.",
+      "status_basis": {
+        "conflicting_result_ids": [],
+        "considered_result_ids": [
+          "R-AFP-BASIN-001"
+        ],
+        "method": "manual_review",
+        "reviewed_on": "2026-10-06",
+        "reviewer": "Astra scientific review",
+        "rule": "An AFP result is evaluable only after all surface and persistence conditions are met.",
+        "supporting_result_ids": []
+      },
+      "status_history": [
+        {
+          "basis": "The basin-horizon pilot produced no surface-converged evaluation windows.",
+          "changed_on": "2026-10-06",
+          "evidence_status": "inconclusive",
+          "lifecycle": "active",
+          "reviewer": "Astra scientific review"
+        }
+      ]
+    },
+    {
+      "alternative_explanations": [
+        "Differences may reflect threshold sensitivity or the three sampled parameter seeds.",
+        "Channel scaling may influence regime classification."
+      ],
+      "evaluation_conditions": [
+        "matched_parameter_seeds",
+        "matched_history_conditions",
+        "explicit_gate_modes",
+        "channelwise_internal_classification"
+      ],
+      "evidence_status": "preliminary_support",
+      "falsifiers": [
+        "Held-out matched seeds show no regime-frequency difference across gate modes.",
+        "Direct gate interventions do not change downstream channel dynamics."
+      ],
+      "id": "H-GATE-001",
+      "lifecycle": "active",
+      "next_test": "Run preregistered gate-value and channel intervention sweeps with time-resolved downstream effects.",
+      "operational_prediction": "Matched seeds and histories show different channel-regime frequencies across active, disabled, and frozen gate modes.",
+      "result_ids": [
+        "R-GATE-REGIME-001"
+      ],
+      "statement": "Gate configuration is associated with redistribution of internal dynamical regimes across explicit Demian channels.",
+      "status_basis": {
+        "conflicting_result_ids": [],
+        "considered_result_ids": [
+          "R-GATE-REGIME-001"
+        ],
+        "method": "manual_review",
+        "reviewed_on": "2026-10-06",
+        "reviewer": "Astra scientific review",
+        "rule": "Preliminary support requires a matched observational difference but does not imply a causal mechanism.",
+        "supporting_result_ids": [
+          "R-GATE-REGIME-001"
+        ]
+      },
+      "status_history": [
+        {
+          "basis": "Active, disabled, and frozen modes differed in full-state and channel regime counts across the sampled seeds.",
+          "changed_on": "2026-10-06",
+          "evidence_status": "preliminary_support",
+          "lifecycle": "active",
+          "reviewer": "Astra scientific review"
+        }
+      ]
+    },
+    {
+      "alternative_explanations": [
+        "Reachable histories may be temporally adjacent and therefore intrinsically closer.",
+        "Residual surface mismatch may explain part of the smaller continuation gap.",
+        "Hidden-state distance differs across reconstruction procedures."
+      ],
+      "evaluation_conditions": [
+        "exact_and_sham_controls",
+        "reported_surface_mismatch",
+        "reported_history_lag",
+        "reported_hidden_state_distance",
+        "identical_future_inputs"
+      ],
+      "evidence_status": "preliminary_support",
+      "falsifiers": [
+        "Gap differences disappear after matching surface residual, hidden distance, and history lag.",
+        "Reachable matched states and zero-hidden reconstructions produce indistinguishable continuation curves."
+      ],
+      "id": "H-CONT-001",
+      "lifecycle": "active",
+      "next_test": "Construct tighter reachable state pairs and model gap as a function of surface residual, hidden distance, and history lag.",
+      "operational_prediction": "Zero-hidden surface reconstruction produces larger continuation gaps than reachable approximately surface-matched histories under identical future dynamics.",
+      "result_ids": [
+        "R-CONT-RECON-001"
+      ],
+      "statement": "Continuation divergence differs across reconstruction procedures that preserve different portions of recurrent state.",
+      "status_basis": {
+        "conflicting_result_ids": [],
+        "considered_result_ids": [
+          "R-CONT-RECON-001"
+        ],
+        "method": "manual_review",
+        "reviewed_on": "2026-10-06",
+        "reviewer": "Astra scientific review",
+        "rule": "Preliminary support records reconstruction-dependent gaps without claiming a manifold mechanism or universal surface insufficiency.",
+        "supporting_result_ids": [
+          "R-CONT-RECON-001"
+        ]
+      },
+      "status_history": [
+        {
+          "basis": "Exact and sham restores were exact; zero-hidden and reachable-history reconstructions produced different gap scales.",
+          "changed_on": "2026-10-06",
+          "evidence_status": "preliminary_support",
+          "lifecycle": "active",
+          "reviewer": "Astra scientific review"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "authority": "Demian",
+    "generated_on": "2026-10-06",
+    "protocol_version": "1.0.0",
+    "registry_id": "demian-research-registry-pilot-v1",
+    "schema_version": 1,
+    "source_commit": "d4bcc157e1a68b1ace9789f1d3567f0a7c879418",
+    "source_repository": "https://github.com/Aeshma-Daeva/Demian-Lab",
+    "status_policy": "manual_review_only"
+  },
+  "results": [
+    {
+      "analysis_scope": {
+        "comparison_count": 78,
+        "comparison_unit": "trajectories",
+        "dependent_observations": [
+          "trajectories share parameter seeds",
+          "checkpoints repeat within trajectories",
+          "radii share directions",
+          "gate modes share parameter seeds"
+        ],
+        "independent_unit": "parameter_seed",
+        "independent_unit_count": 2,
+        "scope_note": "AFP gating used all 78 basin-horizon trajectories; 234 checkpoint rows are repeated observations, not independent replicates."
+      },
+      "artifact_ids": [
+        "A-BASIN-SUMMARY-001",
+        "A-BASIN-TABLE-001"
+      ],
+      "control_ids": [
+        "C-GATE-DISABLED-001",
+        "C-GATE-FROZEN-001"
+      ],
+      "effect_summary": {
+        "afp_candidates": 0,
+        "afp_evaluation_windows": 0,
+        "checkpoint_count": 234,
+        "operationally_unsettled_checkpoints": 234,
+        "trajectory_count": 78
+      },
+      "evaluable": false,
+      "evaluation_conditions_met": [
+        "finite_horizon_completed",
+        "paired_basin_sampling"
+      ],
+      "exclusions": [
+        "No inference about AFP absence.",
+        "No asymptotic nonconvergence claim."
+      ],
+      "experiment_id": "E-BASIN-001",
+      "hypothesis_ids": [
+        "H-AFP-002"
+      ],
+      "id": "R-AFP-BASIN-001",
+      "interpretation": "The run did not evaluate AFP; it located an induction or selection problem for the next protocol.",
+      "missing_evaluation_conditions": [
+        "operational_surface_convergence"
+      ],
+      "observation": "Across the sampled basin-horizon grid, no checkpoint met the operational surface-convergence gate.",
+      "outcome": "unevaluable",
+      "uncertainty": [
+        "Two parameter seeds do not establish architecture-wide prevalence.",
+        "Longer horizons may reveal different regimes."
+      ]
+    },
+    {
+      "analysis_scope": {
+        "comparison_count": 18,
+        "comparison_unit": "matched trajectories",
+        "dependent_observations": [
+          "gate modes share parameter seeds",
+          "history conditions share parameter seeds"
+        ],
+        "independent_unit": "parameter_seed",
+        "independent_unit_count": 3,
+        "scope_note": "Regime counts cover 18 matched trajectories from three independent parameter seeds."
+      },
+      "artifact_ids": [
+        "A-CHAR-SUMMARY-001"
+      ],
+      "control_ids": [
+        "C-GATE-DISABLED-001",
+        "C-GATE-FROZEN-001"
+      ],
+      "effect_summary": {
+        "active_full_state": {
+          "structured_persistent": 4,
+          "transient": 2
+        },
+        "active_message_channel": {
+          "structured_persistent": 4,
+          "transient": 2
+        },
+        "gate_disabled_full_state": {
+          "structured_persistent": 0,
+          "transient": 4,
+          "trivial_accumulation": 2
+        },
+        "gate_frozen_full_state": {
+          "structured_persistent": 2,
+          "transient": 4
+        }
+      },
+      "evaluable": true,
+      "evaluation_conditions_met": [
+        "matched_seeds",
+        "matched_histories",
+        "three_gate_modes",
+        "channelwise_classification"
+      ],
+      "exclusions": [
+        "Association does not establish a gate mechanism.",
+        "No architecture-superiority claim."
+      ],
+      "experiment_id": "E-CHAR-001",
+      "hypothesis_ids": [
+        "H-GATE-001"
+      ],
+      "id": "R-GATE-REGIME-001",
+      "interpretation": "Gate configuration is associated with internal regime selection, but this is not yet a causal channel mechanism.",
+      "missing_evaluation_conditions": [],
+      "observation": "Matched gate modes changed the distribution of classified full-state and channel regimes in the sampled runs.",
+      "outcome": "observed",
+      "uncertainty": [
+        "Three parameter seeds.",
+        "Counts are dependent across gate modes and history conditions.",
+        "Classifier thresholds require broader sensitivity analysis."
+      ]
+    },
+    {
+      "analysis_scope": {
+        "comparison_count": 6,
+        "comparison_unit": "reference controls",
+        "dependent_observations": [
+          "gate modes share parameter seeds"
+        ],
+        "independent_unit": "parameter_seed",
+        "independent_unit_count": 2,
+        "scope_note": "The continuation comparison covers six reference controls: two parameter seeds across three gate modes."
+      },
+      "artifact_ids": [
+        "A-BASIN-SUMMARY-001"
+      ],
+      "control_ids": [
+        "C-EXACT-RESTORE-001",
+        "C-SHAM-RESTORE-001",
+        "C-BODY-SURFACE-001",
+        "C-REACHABLE-SURFACE-001"
+      ],
+      "effect_summary": {
+        "exact_and_sham_mean_gap": 0.0,
+        "reachable_surface_mean_gap_range": [
+          0.012415,
+          0.017426
+        ],
+        "zero_hidden_surface_mean_gap_range": [
+          0.249875,
+          0.354053
+        ]
+      },
+      "evaluable": true,
+      "evaluation_conditions_met": [
+        "exact_restore",
+        "sham_restore",
+        "reported_surface_residual",
+        "identical_future_dynamics"
+      ],
+      "exclusions": [
+        "No universal surface-insufficiency claim.",
+        "No reachable-manifold mechanism claim."
+      ],
+      "experiment_id": "E-BASIN-001",
+      "hypothesis_ids": [
+        "H-CONT-001"
+      ],
+      "id": "R-CONT-RECON-001",
+      "interpretation": "The exposed surface was insufficient for these reconstructions; the present controls do not isolate reachability, match quality, hidden distance, or temporal proximity.",
+      "missing_evaluation_conditions": [
+        "matched_hidden_distance",
+        "matched_history_lag"
+      ],
+      "observation": "Exact and sham restores reproduced continuation; zero-hidden reconstruction diverged more than reachable approximate surface matches.",
+      "outcome": "observed",
+      "uncertainty": [
+        "Reachable controls are earlier states from the same trajectory.",
+        "Surface residual, history lag, and hidden distance are not jointly controlled."
+      ]
+    }
+  ]
+}
